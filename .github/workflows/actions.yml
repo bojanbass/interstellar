@@ -7,7 +7,7 @@ on:
   pull_request:
 
 env:
-  NX_CLOUD_DISTRIBUTED_EXECUTION: 'false'
+  NX_CLOUD_DISTRIBUTED_EXECUTION: 'true'
   NODE_OPTIONS: '--max_old_space_size=4096'
 
 jobs:
