@@ -16,7 +16,7 @@
       "options": {
         "useDaemonProcess": false,
         "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "accessToken": "ZTQ2NzFkMTgtNmI3MS00NzE2LWI5MmItNzRmMGFiMDUyMzRhfHJlYWQtd3JpdGU="
+        "accessToken": "ZGYwN2RkZGYtZGQzNS00Njg4LTliMmUtNmI2YjA0ODg0Y2ZlfHJlYWQtd3JpdGU="
       }
     }
   },
