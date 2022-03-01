@@ -11,7 +11,7 @@ export interface ImportantComponent2Props {}
 export function ImportantComponent2(props: ImportantComponent2Props) {
   return (
     <div>
-      <h1>Welcome to important-component-2 a ss fas!</h1>
+      <h1>Welcome to important-component-2 a ss fas ss!</h1>
     </div>
   );
 }
