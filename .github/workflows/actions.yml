@@ -20,10 +20,8 @@ jobs:
         agent: [1, 2, 3, 4, 5, 6]
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '16'
-      - run: npm install
+      - name: Setup NodeJS and NPM modules
+        uses: ./.github/actions/npm-setup
       - name: Start Nx Agent ${{ matrix.agent }}
         run: npx nx-cloud start-agent
 
@@ -37,16 +35,14 @@ jobs:
           fetch-depth: 0
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '16'
-      - run: npm install
+      - name: Setup NodeJS and NPM modules
+        uses: ./.github/actions/npm-setup
       - name: Run verification
         uses: JamesHenry/parallel-bash-commands@v0.1
         with:
           cmd1: npx nx affected --target=build --parallel=1
-          cmd2: npx nx affected --target=test --parallel=3
-          cmd3: npx nx affected --target=lint --parallel=3
+          cmd2: npx nx affected --target=test --parallel=1
+          cmd3: npx nx affected --target=lint --parallel=1
           cmd4: npx nx affected --target=e2e --parallel=1
       - run: npx nx-cloud stop-all-agents
       - name: Tag main branch if all jobs succeed
@@ -65,15 +61,13 @@ jobs:
       - run: |
           echo "BASE: ${{ env.NX_BASE }}"
           echo "HEAD: ${{ env.NX_HEAD }}"
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '16'
-      - run: npm install
+      - name: Setup NodeJS and NPM modules
+        uses: ./.github/actions/npm-setup
       - name: Run verification
         uses: JamesHenry/parallel-bash-commands@v0.1
         with:
           cmd1: npx nx affected --target=build --parallel=1
           cmd2: npx nx affected --target=test --parallel=1
-          cmd3: npx nx affected --target=lint --parallel=3
+          cmd3: npx nx affected --target=lint --parallel=1
           cmd4: npx nx affected --target=e2e --parallel=1
       - run: npx nx-cloud stop-all-agents
