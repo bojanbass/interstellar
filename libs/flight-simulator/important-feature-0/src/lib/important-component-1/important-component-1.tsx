@@ -11,7 +11,7 @@ export interface ImportantComponent1Props {}
 export function ImportantComponent1(props: ImportantComponent1Props) {
   return (
     <div>
-      <h1>Welcome to important-component-1 HUHU!w</h1>
+      <h1>Welcome to important-component-1 HUHU!dsvw</h1>
     </div>
   );
 }
