@@ -43,7 +43,6 @@ jobs:
           cmd1: npx nx affected --target=build --parallel=1
           cmd2: npx nx affected --target=test --parallel=1
           cmd3: npx nx affected --target=lint --parallel=1
-          cmd4: npx nx affected --target=e2e --parallel=1
       - run: npx nx-cloud stop-all-agents
       - name: Tag main branch if all jobs succeed
         uses: nrwl/nx-tag-successful-ci-run@v1
@@ -69,5 +68,4 @@ jobs:
           cmd1: npx nx affected --target=build --parallel=1
           cmd2: npx nx affected --target=test --parallel=1
           cmd3: npx nx affected --target=lint --parallel=1
-          cmd4: npx nx affected --target=e2e --parallel=1
       - run: npx nx-cloud stop-all-agents
