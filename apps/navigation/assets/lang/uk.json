@@ -1,0 +1,5 @@
+{
+  "todayMessage": "Сьогодні {ts, date, ::yyyyMMdd}",
+  "welcome": "Ласкаво просимо до Catbox",
+  "header": "Чудовий заголовок"
+}
