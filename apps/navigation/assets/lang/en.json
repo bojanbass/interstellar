@@ -1,6 +1,6 @@
 {
-  "todayMessage": "Today is {ts, date, ::yyyyMMdd}",
-  "welcome": "Welcome to Catbox",
-  "header": "Awesome header",
-  "someText": "lorem ipsum"
+    "todayMessage": "Today is {ts, date, ::yyyyMMdd}",
+    "welcome": "Welcome to Catbox",
+    "header": "Awesome header",
+    "impostor": "CAT"
 }

@@ -1,5 +1,6 @@
 {
-  "todayMessage": "Danes je {ts, date, ::yyyyMMdd}",
-  "welcome": "Dobrodošli v Catbox",
-  "header": "Čudovita glava"
+    "todayMessage": "Danes je {ts, date, ::yyyyMMdd}",
+    "welcome": "Dobrodošli v Catbox",
+    "header": "Čudovita glava",
+    "impostor": "Mačka"
 }
